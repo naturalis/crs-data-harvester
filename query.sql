@@ -18,6 +18,7 @@ left join frm_containers c on cr.containerid = c.id
 left join FRM_DIGITALEBESTANDEN db on c.digitaalbestandid = db.id
 left join NCRS_DETERMINATION det on dg.id = det.DATAGROUP
 where  s.registrationnumber IN  ( 'RGM.150773','RGM.150775','RGM.150776','RGM.150777','RGM.150779','RGM.150780','RGM.150781','RGM.150782' )
+and det.preferred = 1
 order by s.INST_COLL_SUBCOLL, s.registrationnumber ASC;
 
 SPOOL OFF 
